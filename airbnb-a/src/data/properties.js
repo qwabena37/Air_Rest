@@ -3,7 +3,7 @@ export const properties = [
     id: 1,
     title: "Modern Apartment in Tamale",
     location: "Tamale",
-    pricePerDay: 120,
+    pricePerDay: 270,
     available: true,
     features: ["WiFi", "Parking", "Air Conditioning"],
     images: [
@@ -15,7 +15,7 @@ export const properties = [
     id: 2,
     title: "Luxury Villa in Kumasi",
     location: "Kumasi",
-    pricePerDay: 250,
+    pricePerDay: 200,
     available: false,
     features: ["Pool", "WiFi", "Garden"],
     images: [
@@ -27,7 +27,7 @@ export const properties = [
     id: 3,
     title: "Modern Apartment in Wa",
     location: "Wa",
-    pricePerDay: 120,
+    pricePerDay: 180,
     available: true,
     features: ["WiFi", "Parking", "Air Conditioning"],
     images: [
@@ -39,7 +39,7 @@ export const properties = [
     id: 4,
     title: "Luxury Villa in Bolgatanga",
     location: "Bolgatanga",
-    pricePerDay: 250,
+    pricePerDay: 160,
     available: false,
     features: ["Pool", "WiFi", "Garden"],
     images: [
@@ -51,7 +51,7 @@ export const properties = [
     id: 5,
     title: "Modern Apartment in Zubzugu",
     location: "Zubzugu",
-    pricePerDay: 120,
+    pricePerDay: 170,
     available: true,
     features: ["WiFi", "Parking", "Air Conditioning"],
     images: [
@@ -63,7 +63,7 @@ export const properties = [
     id: 6,
     title: "Luxury Villa in Walewale",
     location: "Walewale",
-    pricePerDay: 250,
+    pricePerDay: 150,
     available: false,
     features: ["Pool", "WiFi", "Garden"],
     images: [
