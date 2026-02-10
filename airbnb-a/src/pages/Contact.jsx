@@ -23,7 +23,7 @@ export default function Contact() {
             </h2>
             <p className="text-gray-600">
               StayEase Homes Ltd<br />
-              East Legon, Accra<br />
+              Taifa, Accra<br />
               Ghana
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function Contact() {
               Contact Details
             </h2>
             <p className="text-gray-600">
-              📞 Phone: +233 24 123 4567 <br />
+              📞 +233 55 075 0090 <br />
               📧 Email: info@stayease.com
             </p>
           </div>
