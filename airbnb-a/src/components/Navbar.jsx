@@ -1,23 +1,18 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok, FaHome } from "react-icons/fa";
 
 export default function Navbar() {
   const [dateTime, setDateTime] = useState(new Date());
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setDateTime(new Date());
-    }, 1000);
+    const timer = setInterval(() => setDateTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
   const linkClass = ({ isActive }) =>
-    isActive
-      ? "text-blue-600 font-semibold"
-      : "text-gray-700 hover:text-blue-600";
+    isActive ? "text-blue-600 font-semibold" : "text-gray-700 hover:text-blue-600";
 
   return (
     <header className="w-full sticky top-0 z-50">
@@ -33,74 +28,64 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-white shadow">
+      <nav className="bg-white shadow relative">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           
           {/* Logo */}
-<NavLink
-  to="/"
-  className="flex items-center gap-2 text-2xl font-bold text-blue-600"
-  onClick={() => setMenuOpen(false)}
->
-  <FaHome className="text-blue-600 text-xl" />
-  Stay<span className="text-gray-800">Ease</span>
-</NavLink>
+          <NavLink
+            to="/"
+            className="flex items-center gap-2 text-2xl font-bold text-blue-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            <FaHome className="text-blue-600 text-xl" />
+            Stay<span className="text-gray-800">Ease</span>
+          </NavLink>
 
+          {/* Desktop Links */}
+          <ul className="hidden md:flex items-center gap-6">
+            <NavLink to="/about" className={linkClass}>
+              About Us
+            </NavLink>
+            <NavLink to="/locations" className={linkClass}>
+              Locations
+            </NavLink>
+            <NavLink to="/gallery" className={linkClass}>
+              Gallery
+            </NavLink>
+            <NavLink to="/contact" className={linkClass}>
+              Contact Us
+            </NavLink>
+          </ul>
 
-          {/* Social Media Icons (Center) */}
-          <div className="hidden md:flex items-center gap-6">
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition"
-            >
-              <FaFacebookF size={18} />
+          {/* Social Icons */}
+          <div className="flex items-center gap-4 md:gap-6">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
+              <FaFacebookF className="text-lg md:text-base" />
             </a>
-
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-pink-500 transition"
-            >
-              <FaInstagram size={18} />
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500 transition">
+              <FaInstagram className="text-lg md:text-base" />
             </a>
-
-            <a
-              href="https://www.tiktok.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-black transition"
-            >
-              <FaTiktok size={18} />
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition">
+              <FaTiktok className="text-lg md:text-base" />
             </a>
           </div>
 
-          {/* Desktop Nav Links */}
-          <ul className="hidden md:flex gap-8 font-medium">
-            <NavLink to="/about" className={linkClass}>About Us</NavLink>
-            <NavLink to="/locations" className={linkClass}>Locations</NavLink>
-            <NavLink to="/gallery" className={linkClass}>Gallery</NavLink>
-            <NavLink to="/contact" className={linkClass}>Contact Us</NavLink>
-          </ul>
-
           {/* Hamburger Icon */}
           <button
-            className="md:hidden text-2xl focus:outline-none"
+            className="md:hidden text-2xl ml-4 focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? "✕" : "☰"}
           </button>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Right Panel */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`fixed top-20 right-4 h-auto w-56 bg-white/90 backdrop-blur-md shadow-lg rounded-lg transform transition-transform duration-300 ease-in-out md:hidden z-50 ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <ul className="flex flex-col bg-white px-6 py-4 space-y-4 border-t">
+          <ul className="flex flex-col px-6 py-6 space-y-4">
             <NavLink to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>
               About Us
             </NavLink>
