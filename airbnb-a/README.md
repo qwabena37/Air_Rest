@@ -1,16 +1,126 @@
-# React + Vite
+🏠 StayEase – Airbnb-Inspired Rental Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StayEase is a modern Airbnb-inspired web application built with React and Tailwind CSS.
+It allows users to explore rental properties, view interior and exterior images, filter listings
+ and check availability with pricing per day.
 
-Currently, two official plugins are available:
+🚀 Features
+🌍 Property Listings
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Display building exterior and interior images
 
-## React Compiler
+Property cards with:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Location
 
-## Expanding the ESLint configuration
+Price per day
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Features (WiFi, Pool, Parking, etc.)
+
+Availability status
+
+🔍 Search & Filter System
+
+Filter by:
+
+Location
+
+Price range
+
+House features
+
+Dynamic filtering for better user experience
+
+📅 Availability Feature
+
+Property availability indicator
+
+Per-day pricing display
+
+🧭 Responsive Navigation
+
+Logo with house icon
+
+Clickable routes:
+
+Home
+
+About Us
+
+Locations
+
+Gallery
+
+Contact Us
+
+Social media icons (Facebook, Instagram, TikTok)
+
+Mobile hamburger menu with animation
+
+Live current date & time displayed above navbar
+
+🖼 Pages Included
+
+Home
+
+About
+
+Locations
+
+Gallery
+
+Contact
+
+Footer section
+
+🛠 Tech Stack
+
+React (Vite)
+
+Tailwind CSS
+
+React Router DOM
+
+React Icons
+
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Locations.jsx
+│   ├── Gallery.jsx
+│   ├── Contact.jsx
+│
+├── App.jsx
+├── main.jsx
+
+⚙️ Installation & Setup
+
+1️⃣ Clone the repository:
+
+git clone https://github.com/qwabena37/stayease.git
+
+
+2️⃣ Navigate into the project folder:
+
+cd stayease
+
+
+3️⃣ Install dependencies:
+
+npm install
+
+
+4️⃣ Start development server:
+
+npm run dev
+
+
+App will run at:
+
+http://localhost:5173
